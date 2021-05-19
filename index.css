@@ -7,5 +7,18 @@
 }
 
 #about{
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+body{
+    font-family: "Times New Roman", Times, serif;
+}
+
+#body{
+    margin: 20px;
+}
+
+#genre{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(4, 48, 22);
 }
