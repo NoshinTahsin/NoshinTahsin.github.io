@@ -6,8 +6,12 @@
     margin-top: 50px;
 }
 
+.edu{
+    text-align: justify;
+}
+
 #about{
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 body{
@@ -35,4 +39,15 @@ body{
 
 .panel{
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.projects{
+    margin-left: 200px;
+    margin-right: 250px;
+}
+
+.namet{
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: azure;
 }

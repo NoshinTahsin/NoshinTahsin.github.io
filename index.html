@@ -1,74 +1,507 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Noshin Tahsin</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Noshin Tahsin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #6E7889;
+  }
+  h2 {
+    color: #6E7889;
+    text-align: center;
+  }
+  h4 {
+    color: #6E7889;
+    line-height: 1cm;
+    text-align: center;
+  }  
+  .jumbotron {
+    background-color: #40554d;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #69584a;
+    font-size: 50px;
+  }
+  .logo {
+    color:#40554d;
+    font-size: 200px;
+    margin: 50px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color:#4A4944;
+  }
+  .carousel-indicators li {
+    border-color:#4A4944;
+  }
+  .carousel-indicators li.active {
+    background-color: #4A4944;
+  }
+  .item h4 {
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #40554d; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #40554d;
+    background-color: #fff !important;
+    color: #40554d;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #40554d !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #557A95;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #40554d;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #40554d !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #557A95;
+  }
+  .col-sm-6{
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-        <!--<a class="navbar-brand" href="https://github.com/NoshinTahsin">Logo</a>-->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="education.html">Education</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="achievements.html">Achievements</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="experiences.html">Experiences</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="extracurricular.html">Extra-curricular</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="books.html">Books</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="myblog.html">My Blog</a>
-            </li>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-        </ul>
-    </nav>
-
-    <div class="jumbotron row">
-        <div class="col-sm-3" id="intro">
-            <img src="house.jpg" class="rounded-circle row" alt="Cinque Terre" width="236" height="236">
-            <h1 class="row">Noshin Tahsin</h1>
-            <div class="row">
-                <p>Undergrad Student | Software Engineering </p>
-                <p>Institute of Information Technology</p>
-                <p>University of Dhaka</p>
-            </div>
-            <p>
-                <a href="https://github.com/NoshinTahsin">GitHub </a> &nbsp; 
-                <a href="https://github.com/NoshinTahsin">Blog</a> &nbsp;
-                <a href="https://github.com/NoshinTahsin">Email</a> &nbsp;
-                <a href="https://github.com/NoshinTahsin">Facebook</a>
-            </p>
-        </div>
-        <div class="col-sm-6" id="about">
-            <h3>Skills</h3>
-            <p>
-                Programming Languages : C, C++, Java, Python <br>
-                Scripting Language: JavaScript <br>
-                Front End: HTML, CSS, Bootstrap, Material Bootstrap <br>
-                Back End : MySQL, PHP <br>
-                Framework: Django
-            </p>
-        </div>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Noshin Tahsin</a>
     </div>
-</body>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT ME</a></li>
+        <li><a href="#services">EXPERIENCES</a></li>
+        <li><a href="#portfolio">ACHIEVEMENTS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+<div class="jumbotron text-center">
+  <h2 style="color: #f6f6f6;">Welcome to my website!</h2> 
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Me</h2><br>
+      <h4> I am Noshin Tahsin. I completed my graduation <b>(Bachelor of Science in Software Engineering) </b> from <b>Institute of Information Technology, University of Dhaka. </b>
+        I worked as a <b>Software Engineer Intern</b> at <b>SELISE rockin' software </b> from January 2020 - June 2020<h4><br>
+      <a href="https://github.com/NoshinTahsin">GitHub </a> &nbsp; 
+                    <a href="https://github.com/NoshinTahsin">Blog</a> &nbsp;
+                    <a href="https://github.com/NoshinTahsin">Email</a> &nbsp;
+                    <a href="https://github.com/NoshinTahsin">Facebook</a>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-user logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Technical Skills</h2><br>
+      <h4>
+        <b>Programming Languages:</b> C, C++, C#, Java, Python, PHP <br>
+        <b>Frontend Development:</b> HTML, CSS, JavaScript, Bootstrap, Angular, Angular Material, React <br>
+        <b>Other Frameworks:</b> Tensorflow, Flask, Django <br>
+        <b>Database</b> MySQL, MongoDB, SQLite, Firebase <br>
+        <b>Source Control:</b> Git, Sourcetree, TortoiseGit <br>
+        <b>Other Tools:</b> Postman, RabbitMQ <br>
+
+      </h4><br>
+    </div>
+  </div>
+</div>
+
+<div id="services" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Internship Experience</h2><br>
+      <h4> Worked as <b>Software Engineer Intern</b> at <b>Secured Link Services</b>.
+        Worked in <b>Frontend development </b>in <b>Angular, Machine Learning, Data Analysis</b> and <b>UI testing</b>.
+        Developed an ML Service for a new feature for project ARC, Designed the UI for this feature. 
+        Used <b><i>Angular, Tensorflow, Python, Flask, MongoDB, RabbitMQ</b></i> for this project.</h4><br>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-briefcase logo"></span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid bg-grey text-center">
+  <h2>Development Experiences</h2>
+  <br>
+  <div class="row slideanim">
+    <div class="col col-sm-6">
+      <h2>Plugin for Jira (2021)</h2>
+      <h4> Developed an Assignee Suggestion plugin for Jira Software, using Information Retrieval techniques, that suggests appropriate assignee list for a newly created jira issue based on the developers’ expertise and recency. </h4>>
+
+    </div>
+    <div class="col col-sm-6">
+      <h2>Linear Programming Solver Tool (2020)</h2>
+      <h4>A tool to easily solve linear programming problems, perform sensitivity analysis and feasibility analysis as well as get better result interpretation. Developed this tool using python, flask and bootstrap.</p>
+        
+    </div>
+    
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col col-sm-6">
+      <h2>Partocalc App (2019)</h2>
+      <h4>Performed  requirements analysis, design, documentation of Partocalc (a medical app funded by Terre Des Hommes Foundation) and did real life testing with the nurses and midwives at Kurigram District Hospital. </p>
+    </div>
+    <div class="col col-sm-6">
+      <h2>A simple SQL engine (2018)</h2>
+      <h4>Developed an SQL engine in C++ that is able to Create tables in database, Insert, Delete, Update rows in the tables and make queries using the SELECT command.</p>
+    </div>
+    
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col col-sm-6">
+      <h2>Brac Repository : Done at Bracathon 3.0 (2019)</h2>
+      <h4>Performed requirements analysis, designed and developed the UI for a document management system for BRAC at Bracathon 3.0
+      </div>
+    <div class="col col-sm-6">
+      <h2>User Interface Design of IIT Debating Club Website (2019)</h2>
+      <h4>Did this as a project for the Web Technology course</h4>>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+   
+    <div class="col-sm-6">
+      <h2>Requirement Analysis (2021)</h2>
+      <h4>Performed requirements analysis, prepared software requirement specification and documentation for the automation system of Bangladesh Technical Education Board (BTEB)</p>
+    </div>
+    <div class="col-sm-6">
+      <h2>Test Smell Detection Tool (2019)</h2>
+      <h4>Developed a tool to detect the presence of General Fixture Test Smell in a given Java Code </h4>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+  
+    <div class="col-sm-6">
+      <h2>AI and ML projects:</h2>
+      <h4>Developed Bangla Sign Language Detection Tool, 4-Connect Game, Wumpus World Game, Performed Spam-Ham Detection, Skin Detection, Software Defect Classification in Python
+      </div>
+      <div class="col-sm-6">
+      <h2>Artist Recognition (2021)</h2>
+            <h4>Developed a machine learning model for Artist Identification from Digital and Digitized Paintings using Convolutional Neural Networks and Transfer Learning </p>
+        </div>
+          </div>
+</div>
+
+<!--<div id="portfolio" class="container-fluid text-center ">
+  <h2>Achievements</h2><br>
+  
+  <h2>Programming Contests</h2>
+  <br>
+  <div class="row slideanim">
+    <div class="col col-sm-6">
+      <h3>National Girls’ Programming Contest 2017</h3>
+      <h4>Team DU_codeFreaks, Rank: 15</h4>
+      <a href="https://algo.codemarshal.org/contests/ngpc2017/standings">See Standings</a><br><br>
+    </div>
+    <div class="col col-sm-6">
+      <h3>NSU Inter University Girls’ Programming Contest 2018</h3>
+      <h4>Team IIT_Beginners, Rank: 12</h4>
+      <a href="https://toph.co/c/nsu-iugpc-2018/standings">See Standings</a><br><br>      
+    </div>
+  </div>
+  <br><br>
+
+  <div class="row slideanim">
+    <div class="col col-sm-6">
+      <h3>Daffodil National Girls’ Programming Contest 2018</h3>
+      <h4>Team IIT_Beginners, Rank: 34</h4>
+      <a href="https://algo.codemarshal.org/contests/ngpc18/standings">See Standings</a><br><br>
+    </div>
+    <div class="col col-sm-6">
+      <h3>BUP Inter University Programming Contest 2019</h3>
+      <h4>Team: IIT_Technogirls, Rank: 58</h4>
+      <a href="https://algo.codemarshal.org/contests/bup-iupc-19/standings">See Standings</a><br><br>      
+    </div>
+  </div>
+  <br><br>
+
+  <h2>Hackathons and Business Case Competitions</h2>
+  <br>
+  <div class="row slideanim">
+    <div class="col col-sm-6">
+      
+    </div>
+    <div class="col col-sm-6">
+      
+    </div>
+  </div>
+  <br><br>
+
+  <div class="row slideanim">
+    <div class="col col-sm-6">
+     
+    </div>
+    <div class="col col-sm-6">
+      
+      <a href="https://algo.codemarshal.org/contests/bup-iupc-19/standings">See Standings</a><br><br>      
+    </div>
+  </div>
+  <br><br>
+
+  <h2>Olympiads</h2>
+  <br>
+  <div class="row slideanim">
+    <div class="col col-sm-6">
+      
+    </div>
+    <div class="col col-sm-6">
+      
+    </div>
+  </div>
+  <br><br>
+  </div>
+</div>-->
+
+<!-- Container (Pricing Section) -->
+<div id="portfolio" class="container-fluid">
+  <div class="text-center">
+    <h2>Achievements</h2>
+    <br>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h3>Programming Contests</h3>
+        </div>
+        <div class="panel-body">
+          <h3>Daffodil National Girls’ Programming Contest 2018</h3>
+          <h4>Team IIT_Beginners, Rank: 34</h4>
+          <a href="https://algo.codemarshal.org/contests/ngpc18/standings">See Standings</a><br><br>
+          <h3>NSU Inter University Girls’ Programming Contest 2018</h3>
+          <h4>Team IIT_Beginners, Rank: 12</h4>
+          <a href="https://toph.co/c/nsu-iugpc-2018/standings">See Standings</a><br><br>
+          <h3>Daffodil National Girls’ Programming Contest 2018</h3>
+          <h4>Team IIT_Beginners, Rank: 34</h4>
+          <a href="https://algo.codemarshal.org/contests/ngpc18/standings">See Standings</a><br><br>
+          <h3>BUP Inter University Programming Contest 2019</h3>
+          <h4>Team: IIT_Technogirls, Rank: 58</h4>
+          <a href="https://algo.codemarshal.org/contests/bup-iupc-19/standings">See Standings</a><br><br>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h3>Hackathons and Business Case Competitions</h3>
+        </div>
+        <div class="panel-body">
+          <h3>Bracathon 3.0 (2019)</h3>
+          <h4>Top 8, Problem Category 5</h4>
+          <h3>HULT Prize 2020(On Campus Round)</h3>
+          <h4>2nd Runner Up</h4>
+          <h3>Abinta’s Young Change Leaders Hackathon (2019)</h3>
+          <h4>Top 20</h4>
+          <h3>Tech for Peace Hackathon (2017)</h3>
+          <h4>National Round, Top 20</h4>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h3>Olympiads and Others</h3>
+        </div>
+        <div class="panel-body">
+          <h3>Bangladesh Math Olympiad (BDMO Regional, 2009)</h3>
+          <h4>2nd Runners Up</h4>
+          <h3>Intra-Department Math Olympiad (2017)</h3>
+          <h4>1st Runners Up</h4>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
 </html>
